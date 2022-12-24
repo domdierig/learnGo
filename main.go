@@ -1,6 +1,6 @@
 package main
 
-import "github.com/domdierig/learnGo/adventOfCode/day1"
+import "github.com/domdierig/learnGo/adventOfCode2022/day1"
 
 func main() {
 	// refVsValue.RefVsValue()
