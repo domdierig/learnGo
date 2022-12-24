@@ -1,11 +1,9 @@
 package main
 
-import (
-	"github.com/domdierig/learnGo/refVsValue"
-)
+import "github.com/domdierig/learnGo/adventOfCode/day1"
 
 func main() {
-	// day1.CalcCalories()
+	// refVsValue.RefVsValue()
 
-	refVsValue.RefVsValue()
+	day1.CalcCalories()
 }
