@@ -5,12 +5,13 @@ import (
 	"os"
 )
 
-func ReadFileToString(path string) string {
+func ReadFileToString(path string) (string, error) {
 	content, error := os.ReadFile(path)
 
 	if error != nil {
 		fmt.Println(error)
+		return "", error
 	}
 
-	return string(content)
+	return string(content), nil
 }

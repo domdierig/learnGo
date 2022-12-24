@@ -7,5 +7,9 @@ import (
 )
 
 func CalcCalories() {
-	fmt.Println(helper.ReadFileToString("./adventOfCode/day1/input.txt"))
+	file, error := helper.ReadFileToString("./adventOfCode/day1/input.txt")
+
+	if error != nil {
+		fmt.Println(file)
+	}
 }
