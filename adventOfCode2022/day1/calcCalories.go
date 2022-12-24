@@ -9,29 +9,29 @@ import (
 )
 
 func CalcCalories() {
-	file, error := helper.ReadFileToString("./adventOfCode/day1/input.txt")
+	file, error := helper.ReadFileToString("./adventOfCode2022/day1/input.txt")
 
 	if error == nil {
 		splittedFile := strings.Split(file, "\n")
 		expidition := *NewExpidition()
-		newElve := NewElve()
+		newElve := *NewElve()
 
 		for _, caloriesOfSupply := range splittedFile {
 			if caloriesOfSupply == "" {
-				expidition.elves = append(expidition.elves, *newElve)
+				expidition.elves = append(expidition.elves, newElve)
 
 				if newElve.sumOfCalories > expidition.elveWithMostCalories.sumOfCalories {
 					expidition.elveWithThridMostCalories = expidition.elveWithSecondMostCalories
 					expidition.elveWithSecondMostCalories = expidition.elveWithMostCalories
-					expidition.elveWithMostCalories = *newElve
+					expidition.elveWithMostCalories = newElve
 				} else if newElve.sumOfCalories > expidition.elveWithSecondMostCalories.sumOfCalories {
 					expidition.elveWithThridMostCalories = expidition.elveWithSecondMostCalories
-					expidition.elveWithSecondMostCalories = *newElve
+					expidition.elveWithSecondMostCalories = newElve
 				} else if newElve.sumOfCalories > expidition.elveWithThridMostCalories.sumOfCalories {
-					expidition.elveWithThridMostCalories = *newElve
+					expidition.elveWithThridMostCalories = newElve
 				}
 
-				newElve = NewElve()
+				newElve = *NewElve()
 			} else {
 				caloriesOfSupplyInt, error := strconv.Atoi(caloriesOfSupply)
 
