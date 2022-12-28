@@ -30,9 +30,6 @@ func CalcScore() {
 		}
 	}
 
-	fmt.Println(scoreBoardA)
-	fmt.Println(scoreBoardB)
-
 	fmt.Println(totalScorePartA)
 	fmt.Println(totalScorePartB)
 }

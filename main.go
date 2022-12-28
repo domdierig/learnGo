@@ -1,12 +1,13 @@
 package main
 
 import (
-	"github.com/domdierig/learnGo/adventOfCode2022/day2"
+	"github.com/domdierig/learnGo/adventOfCode2022/day3"
 )
 
 func main() {
 	// refVsValue.RefVsValue()
 	// day1.CalcCalories()
+	// day2.CalcScore()
 
-	day2.CalcScore()
+	day3.CalcPrio()
 }
