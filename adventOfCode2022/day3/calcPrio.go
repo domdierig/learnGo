@@ -33,7 +33,7 @@ func CalcPrio() {
 		}
 	}
 
-	fmt.Println(prioSum)
+	fmt.Println(prioSum) // prio is to low
 }
 
 // Lowercase item types a through z have priorities 1 through 26.
